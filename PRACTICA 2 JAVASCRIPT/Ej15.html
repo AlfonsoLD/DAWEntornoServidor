@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio15</title>
+</head>
+
+<body>
+    <script>
+        let dia = prompt('Introduce un día de la semana');
+        let nextDia = diaSiguiente(dia);
+
+        if (nextDia === null) {
+            alert('El día introducido no existe');
+        } else {
+            alert(`el siguiente es ${nextDia}`);
+        }
+
+        function diaSiguiente(dia) {
+            let diasSemana = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+            let diaSiguienteIndex;
+
+            for (let i = 0; i < diasSemana.length; i++) {
+                if (dia === diasSemana[i]) {
+                    diaSiguienteIndex = i + 1;
+
+                    if (diaSiguienteIndex > diasSemana.length - 1) diaSiguienteIndex = 0;
+                    return diasSemana[diaSiguienteIndex];
+                }
+            }
+            return null;
+        }
+    </script>
+</body>
+
+</html>

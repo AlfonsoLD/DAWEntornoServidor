@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ejercicio Sencillo 1 Arrays. Mayor, Menor y Media</h2>
+    <label>Introduce una lista de numeros separados por coma</label>
+    <input type="text" id="1">
+    <button onclick="ejemplo(event)">Cargar ejemplo</button>
+    <button onclick="a(event)">Calcular</button>
+    <button onclick="reinicio(event)">Reiniciar</button>
+    <p id="resultado"></p>
+    <p id="resultado1"></p>
+    <p id="resultado2"></p>
+    <p id="resultado3"></p>
+    <script>
+        function reinicio(){
+
+            document.getElementById("resultado").innerHTML = ` `
+            document.getElementById("resultado1").innerHTML = `  `
+            document.getElementById("resultado2").innerHTML = `  `
+            document.getElementById("resultado3").innerHTML = `  `
+
+        }
+        function ejemplo(){
+            
+            let lista = "4,3,2,1"
+            let numList = lista.split(",");
+            let sum = 0;
+            let list = numList.map((numList)=>{
+                return parseInt(numList)
+
+            })
+
+            for (let index = 0; index < list.length; index++) {
+                 sum = list[index] + sum
+                
+            }
+            document.getElementById("resultado").innerHTML = `La suma es ${sum}`
+            document.getElementById("resultado1").innerHTML = `La media es: ${sum/ list.length}`
+            document.getElementById("resultado2").innerHTML = `El mayor es: ${Math.max(...list)}`
+            document.getElementById("resultado3").innerHTML = `El menor es: ${Math.min(...list)}`
+            
+        
+
+
+        }
+        function a(){
+            let lista = document.getElementById("1").value
+            let numList = lista.split(",");
+            let sum = 0;
+            let list = numList.map((numList)=>{
+                return parseInt(numList)
+
+            })
+
+            for (let index = 0; index < list.length; index++) {
+                 sum = list[index] + sum
+                
+            }
+            document.getElementById("resultado").innerHTML = `La suma es ${sum}`
+            document.getElementById("resultado1").innerHTML = `La media es: ${sum/ list.length}`
+            document.getElementById("resultado2").innerHTML = `El mayor es: ${Math.max(...list)}`
+            document.getElementById("resultado3").innerHTML = `El menor es: ${Math.min(...list)}`   
+        }
+    </script>
+</body>
+</html>

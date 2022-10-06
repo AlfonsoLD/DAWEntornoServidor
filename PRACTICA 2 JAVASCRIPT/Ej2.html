@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio2</title>
+</head>
+<body>
+    <form>
+        <input id="nombre" type="text" placeholder="Insertar nombre..."/>
+        <button onclick="insertarNombre(event)">Insertar</button> 
+    </form>
+    <div>
+        <ul id="lista-nombres"></ul>
+    </div>
+    <script>
+    function insertarNombre(evt) {
+    evt.preventDefault();
+
+    let nombre = document.getElementById("nombre").value;
+
+    if (nombre == "") {
+        alert("El nombre no puede estar vacio");
+    } else {
+        let opcion = "<li> " + nombre + "</li>";
+
+        let lista = document.getElementById("lista-nombres");
+
+        lista.innerHTML += opcion;
+
+        alert("Se ha insertado el nombre");
+    }
+
+}
+    </script>
+
+
+</body>
+</html>
