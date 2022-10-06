@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+</head>
+
+<body>
+    <script>
+        let nota1 = parseInt(prompt('primera nota'));
+        let nota2 = parseInt(prompt('segunda nota'));
+        let nota3 = parseInt(prompt('tercera nota'));
+
+        let promedio = (nota1 + nota2 + nota3) / 3;
+        console.log(promedio);
+
+        if (promedio < 5) alert('Repetidor');
+        else if (promedio < 7) alert('Superado');
+        else alert('Promocionado');
+    </script>
+</body>
+
+</html>

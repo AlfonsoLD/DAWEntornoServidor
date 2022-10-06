@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio8</title>
+</head>
+<body>
+    <script>
+        var name, age, days, category;
+
+        name = prompt('Ingrese su nombre: ');
+        age = parseInt(prompt('Ingrese la edad: '));
+
+        if( name && age){
+            if(age <=0 ){
+                alert('Ingrese una edad válida.');
+            } else{
+                days = age * 365;
+                category = age >=18 ? 'mayor':'menor';
+
+                alert("Te llamas "+ name + "\n" + "Eres "+category+" de edad y llevas " + days + " dias viviendo.");
+            }
+        } else{
+            alert('No a ingresado o la edad o el nombre.');
+        }
+    </script>
+</body>
+</html>

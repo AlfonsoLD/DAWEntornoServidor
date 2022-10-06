@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejercicio24</title>
+</head>
+<body>
+
+    <script>
+        function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+            let saldo = 50
+
+            do{
+
+            let apuesta = parseInt(prompt("¿ Cuanto quiere apostar ?"))
+
+            if( apuesta > saldo){
+
+                alert("No puedes apostar mas de tu saldo")
+            } else {
+
+                let num = parseInt(prompt("¿ A que numero quiere apostar ?"))
+                let ranNum = getRandomArbitrary(1,6)
+                if(num == ranNum ){
+
+                    saldo = saldo + apuesta
+                    alert("Ganador!!!")
+
+                }else {
+                    saldo = saldo - apuesta
+                    alert("Perdiste")
+                }
+
+            }
+        
+            }while(saldo > 0 && saldo < 200)
+            alert("Te quedaste sin saldo")
+
+            </script>
+        
+</body>
+</html>
